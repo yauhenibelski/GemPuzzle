@@ -1,0 +1,13 @@
+.container{
+    position: relative;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 380px;
+    background-color: $container_color;
+    margin-top: 10vh;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+

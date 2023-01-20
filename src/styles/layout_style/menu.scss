@@ -1,0 +1,39 @@
+.menu_container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 230px;
+    top: -235px;
+    background-color: $menu;
+    z-index: 2;
+    box-sizing: border-box;
+    transition: .3s;
+}
+.menu_open{
+    top: 0px;
+}
+.form_size{
+    width: 40%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .size{
+        @include flex_center();
+        color: $buttons_color;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .radio_size{
+        display: none;
+    }
+    .radio_size:checked + .size{
+        color: #62b9bd;
+    }
+}
+
+.menu_buttons_container{
+    width: 60%;
+}
+
+

@@ -1,0 +1,35 @@
+.results_container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 380px;
+    top: -385px;
+    background-color: $menu;
+    z-index: 3;
+    box-sizing: border-box;
+    transition: .3s;
+
+    span{
+        color: $buttons_color;
+        font-size: $font_size;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .result{
+        margin: 7px;
+        text-align: center;
+        color: $buttons_color;
+        font-size: 20px;
+    }
+
+    h1{
+        margin-top: 30%;
+        text-align: center;
+        color: $buttons_color;
+    }
+}
+.results_container_open{
+    top: 0px;
+}

@@ -1,0 +1,46 @@
+.buttons_container{
+    @include flex_center();
+    justify-content: space-between;
+    height: 60px;
+    margin-bottom: 10px;
+    padding: 0px 20px;
+
+    .menu{
+        &::before{
+            content: '';
+            width: 22px;
+            height: 15px;
+            top: 12px;
+            left: 9px;
+            background-image: url(../img/burger_menu.svg);
+            background-size: cover;
+            position: absolute;
+            opacity: .7;
+        }
+
+        @include button();
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-color: $mute_color;
+        border-radius: 15px;
+    }
+    .start{
+        @include button();
+    }
+    .stop{
+        @include button();
+    }
+    .save{
+        @include button();
+    }
+    .results{
+        @include button();
+    }
+}
+.mute{
+    @include menu_buttons();
+}
+.save_menu{
+    @include menu_buttons();
+}

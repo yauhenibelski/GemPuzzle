@@ -1,0 +1,67 @@
+* {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+$font_size: 32px;
+
+@mixin flex_center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin button(){
+    @include flex_center();
+    background-color: $buttons_color;
+    height: 40px;
+    width: 70px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    color: $buttons_text_color;
+    cursor: pointer;
+}
+@mixin menu_buttons(){
+    @include flex_center();
+    width: 80%;
+    height: 50px;
+    margin: 20px auto;
+    background-color: $buttons_color;
+    color: $buttons_text_color;
+    border-radius: 20px;
+    cursor: pointer;
+}
+@mixin start_save_buttons{
+    @include flex_center();
+    width: 70%;
+    height: 15%;
+    margin: 10px;
+    border-radius: 40px;
+    color: $buttons_color;
+    font-size: $font_size;
+    cursor: pointer;
+}
+h1{
+    font-size: $font_size;
+    letter-spacing: 3px;
+    color: $name_color;
+    margin: 0;
+    text-shadow: rgb(0 0 0 / 32%) 1px 0 10px;
+}
+
+h2{
+    color: $buttons_color;
+    font-size: $font_size;
+    letter-spacing: 2px;
+}
+@media (max-width: 350px) {
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 24px;
+    }
+}

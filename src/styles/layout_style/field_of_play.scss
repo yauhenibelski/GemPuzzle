@@ -1,0 +1,11 @@
+.field_of_play_container{
+    position: relative;
+    margin: auto 10px;
+    width: auto;
+    height: calc(100vw - 10vw);
+    max-height: 360px;
+    background-color: #1f2b4f40;
+    border-radius: 15px;
+    box-shadow: inset -0px 0px 52px -11px rgba(0, 0, 0, 1);
+    overflow: hidden;
+}
