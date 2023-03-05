@@ -4,6 +4,7 @@ import {
 import { popup } from "./buttons/popup";
 import { bestResults } from "./buttons/results";
 import { stopContinueClick } from "./buttons/stop";
+import { mute } from "./buttons/mute";
 
 export function addTiles(n = 4) {
   const fieldPlay = document.querySelector('.field_of_play_container');
@@ -49,6 +50,7 @@ export function clickTiles(e) {
   const top = e.target.offsetTop;
   const counter = document.querySelector('.counter');
 
+
   if ((e.target.classList.contains('tiles') && e.target !== lastTile)
          && validTile().includes(e.target)) {
     e.target.style.cssText = `
@@ -61,6 +63,7 @@ export function clickTiles(e) {
             `;
 
     counter.innerHTML = +counter.innerHTML + 1;
+    mute();
   }
   setTimeout(winGame, 250);
 }

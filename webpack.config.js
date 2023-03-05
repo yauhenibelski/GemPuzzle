@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = ({ develop }) => ({
@@ -31,7 +32,7 @@ module.exports = ({ develop }) => ({
         // use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|jpg|svg|gif|ttf|woff|woff2|eot)$/,
+        test: /\.(png|jpg|svg|gif|ttf|mp3)$/,
         type: 'asset/resource',
         generator: {
             filename: './dependencies/[path][name][ext]',
@@ -52,8 +53,16 @@ module.exports = ({ develop }) => ({
         new HtmlWebpackPlugin({
           title: 'Gem Puzzle',
           template: './index.html',
-          inject: 'body'
+          // inject: 'body'
         }),
+        new CopyPlugin({
+          patterns: [
+              {
+                from: path.resolve(__dirname, 'src/audio'),
+                to:   path.resolve(__dirname, 'docs/audio')
+              },
+           ]
+        })
         // new MiniCssExtractPlugin({
         //   filename: 'style.css'
         // })
